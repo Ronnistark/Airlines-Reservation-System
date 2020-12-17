@@ -1,0 +1,25 @@
+.header__optionLineOne {
+    font-size: 40px;
+    color:orange;
+  }
+  
+  .header__optionLineTwo {
+    font-size: 10px;
+    font-weight: 800;
+  }
+  .header__option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right:10px;
+    color: white;
+
+  }
+  a:hover {
+    background-color:rgb(47, 79, 79);
+  }
+  .r6{
+      font-size: 20px;
+      display:flex;
+  }
+  

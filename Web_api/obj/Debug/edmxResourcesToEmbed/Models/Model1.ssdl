@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FlightModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone_no" Type="bigint" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="20" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="20" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Country" Type="varchar" MaxLength="20" />
+    <Property Name="Nationality" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Alternate_Email" Type="varchar" MaxLength="50" />
+    <Property Name="phone_no" Type="bigint" />
+    <Property Name="Password" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Flight.dbo.Schedule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="Source" />
+      <PropertyRef Name="Destinatiom" />
+      <PropertyRef Name="Depature" />
+      <PropertyRef Name="Arrival" />
+      <PropertyRef Name="price" />
+    </Key>
+    <Property Name="Day" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Source" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Destinatiom" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Depature" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Arrival" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="price" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ticket_Form">
+    <Key>
+      <PropertyRef Name="Ticket_ID" />
+    </Key>
+    <Property Name="Ticket_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CID" Type="int" />
+    <Property Name="Source" Type="varchar" MaxLength="50" />
+    <Property Name="Destination" Type="varchar" MaxLength="50" />
+    <Property Name="Depature" Type="date" />
+    <Property Name="Return_date" Type="date" />
+  </EntityType>
+  <EntityContainer Name="FlightModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_Form" EntityType="Self.Ticket_Form" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schedule" EntityType="Self.Schedule" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Schedule].[Day] AS [Day], 
+    [Schedule].[Source] AS [Source], 
+    [Schedule].[Destinatiom] AS [Destinatiom], 
+    [Schedule].[Depature] AS [Depature], 
+    [Schedule].[Arrival] AS [Arrival], 
+    [Schedule].[price] AS [price]
+    FROM [dbo].[Schedule] AS [Schedule]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

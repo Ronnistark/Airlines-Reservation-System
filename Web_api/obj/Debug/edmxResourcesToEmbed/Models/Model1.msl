@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FlightModelStoreContainer" CdmEntityContainer="FlightEntities3">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="FlightModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="FlightModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Message1" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="FlightModel.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Alternate_Email" ColumnName="Alternate_Email" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ticket_Form">
+      <EntityTypeMapping TypeName="FlightModel.Ticket_Form">
+        <MappingFragment StoreEntitySet="Ticket_Form">
+          <ScalarProperty Name="Ticket_ID" ColumnName="Ticket_ID" />
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Depature" ColumnName="Depature" />
+          <ScalarProperty Name="Return_date" ColumnName="Return_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedules">
+      <EntityTypeMapping TypeName="FlightModel.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Destinatiom" ColumnName="Destinatiom" />
+          <ScalarProperty Name="Depature" ColumnName="Depature" />
+          <ScalarProperty Name="Arrival" ColumnName="Arrival" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

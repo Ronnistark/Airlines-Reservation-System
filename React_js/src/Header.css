@@ -1,0 +1,48 @@
+.h2{
+    font-size: 20px;
+    text-align:right;
+}
+.r9{
+    height: 200px;
+    width:500px;
+}
+.r1{
+    left:80px;
+    position:relative;  
+    top:2px;
+    background-color: rgb(241, 235, 215);
+}
+img{
+    border: 5px solid rgb(238, 231, 231);
+}
+p{
+    left:20px;
+    position:relative; 
+    top:0px;
+    display:inline-block;
+    font-size: 20px;
+    
+    
+}
+.raos{
+    left:20px;
+    position:relative; 
+    top:0px;
+    display:inline-block;
+    font-size: 20px;
+    
+
+}
+.ra{
+    height: 300px;
+    width:500px;
+    vertical-align: top;
+
+}
+.tty2{
+    width:65%;
+    background-color: rgb(133, 133, 156);
+}
+.r999{
+    background-color:rgb(178, 172, 184);
+}

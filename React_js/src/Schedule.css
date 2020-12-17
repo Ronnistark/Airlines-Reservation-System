@@ -1,0 +1,36 @@
+h3{
+    top:20px;
+    text-align:center;
+    background-color:orange ;
+}
+.r16{
+    width:400px;
+    height:160px;
+    
+    
+}
+.madar{
+    background-color: rgb(236, 241, 240);
+}
+.footer{
+    
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #2b2325;
+    text-align: center;
+    color: rgb(237, 255, 196);
+  }
+
+  td:nth-child(even){
+      background-color:rgb(237, 255, 196);
+  }
+  td:nth-child(odd){
+      background-color: rgb(237, 255, 196);
+  }
+  .rand{
+      color: rgb(34, 27, 24);
+      background-color:rgb(237, 255, 196);
+  }
+
