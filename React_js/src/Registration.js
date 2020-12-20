@@ -112,7 +112,7 @@ export default class Registration extends Component {
 
         
     
-       fetch('https://localhost:44385/api/Read/Get5?Email=roshan111@gmail.com')
+       fetch('https://localhost:44385/api/Read/Get5?Email=+Email')
        .then(response=>response.json())
        .then(data=>{
         this.setState({deps:data});
